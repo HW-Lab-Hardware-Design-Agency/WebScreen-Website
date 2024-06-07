@@ -192,38 +192,24 @@ $(function ($) {
         }, 600);
     });
 
-    $(document).ready(function () {
-        // Attach event listener to all forms with class 'subscribe-form'
-        $('.subscribe-form').submit(function (event) {
-            console.log('Form submitted!');
-            event.preventDefault(); // Prevent the default form submission
-
-            // Get the email from the form that was submitted
+    $(document).ready(function() {
+        $('.subscribe-form').submit(function(event) {
+            event.preventDefault();  // Prevent the default form submission behavior
+    
+            // Get the email from the input field within the form that triggered the event
             var email = $(this).find('input[type="email"]').val();
-
-            // Simple email validation
-            if (email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
-                // Set the email value in the hidden form
-                $('#EMAIL').val(email);
-
-                // Perform AJAX submission using jQuery's ajax method
-                $.ajax({
-                    url: $('#sib-form').attr('action'),
-                    type: 'POST',
-                    data: $('#sib-form').serialize(),
-                    success: function (data) {
-                        console.log('Success:', data);
-                        alert('Subscription successful!');
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Error:', error);
-                        alert('There was an error with your subscription.');
-                    }
-                });
+    
+            // Validate the email address format
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(email)) {
+                // If the email is valid, open the new tab with the URL
+                var url = 'https://hwlab.io/subscribe?e_mail=' + encodeURIComponent(email);
+                window.open(url, '_blank');
             } else {
+                // If the email is invalid, alert the user
                 alert('Please enter a valid email address.');
             }
         });
-    });
+    });    
 
 });
