@@ -1081,7 +1081,7 @@ select:focus {
 ** Main Menu  Area Start
 ---------------------------*/
 .navigation {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1208,7 +1208,7 @@ select:focus {
 ------------------------------*/
 .hero-area {
   position: relative;
-  padding: 365px 0px 291px;
+  padding: 365px 0px 230px;
   background: url(../images/heroarea.jpg);
   background-position: center;
   background-size: cover;
@@ -1543,8 +1543,8 @@ select:focus {
 
 .feature .feature-box1 .feature-circle {
   position: absolute;
-  right: -275px;
-  top: 85px;
+  right: -278px;
+  top: 80px;
 }
 
 .feature .feature-box2 .feature-circle {
@@ -1555,27 +1555,27 @@ select:focus {
 
 .feature .feature-box3 .feature-circle {
   position: absolute;
-  right: -165px;
-  top: 13px;
+  right: -115px;
+  top: 15px;
 }
 
 .feature .feature-box4 .feature-circle {
   position: absolute;
-  left: -125px;
+  left: -94px;
   right: auto;
-  top: 228px;
+  top: 218px;
 }
 
 .feature .feature-box5 .feature-circle {
   position: absolute;
-  left: -100px;
-  top: 63px;
+  left: -120px;
+  top: 45px;
 }
 
 .feature .feature-box6 .feature-circle {
   position: absolute;
-  left: -175px;
-  top: 48px;
+  left: -245px;
+  top: 150px;
 }
 
 /*---------------------------
@@ -2434,12 +2434,12 @@ select:focus {
   margin-top: 4rem;
 }
 
-.contact .newsletter-form-area {
+.newsletter-form-area {
   position: relative;
   text-align: center;
 }
 
-.contact .newsletter-form-area input {
+.newsletter-form-area input {
   width: 100%;
   height: 60px;
   border-radius: 50px;
@@ -2451,7 +2451,7 @@ select:focus {
   box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.1);
 }
 
-.contact .newsletter-form-area button {
+.newsletter-form-area button {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -2466,15 +2466,15 @@ select:focus {
   transition: all 0.3s ease-in;
 }
 
-.contact .newsletter-form-area button c span {
+.newsletter-form-area button c span {
   margin-right: 5px;
 }
 
-.contact .newsletter-form-area button:hover {
+.newsletter-form-area button:hover {
   background: #b71025;
 }
 
-.contact .newsletter-form-area button:focus {
+.newsletter-form-area button:focus {
   outline: 0px;
 }
 
@@ -2530,27 +2530,23 @@ select:focus {
 }
 
 .footer .fotter-social-links ul li a {
-  font-size: 14px;
-  width: 35px;
-  height: 35px;
+  font-size: 23px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   border-radius: 50%;
   text-align: center;
-  line-height: 36px;
+  line-height: 43px;
   margin: 0px 3px;
   color: #fff;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease-in;
 }
 
-.footer .fotter-social-links ul li a.facebook {
-  background: #0069f7;
-  border-color: #0069f7;
-}
-
-.footer .fotter-social-links ul li a.twitter {
-  background: #00c6f7;
-  border-color: #00c6f7;
+.footer .fotter-social-links ul li a.tiktok,
+.footer .fotter-social-links ul li a.x {
+  background: black;
+  border-color: black;
 }
 
 .footer .fotter-social-links ul li a.linkedin {
@@ -2558,12 +2554,16 @@ select:focus {
   border-color: #007bb5;
 }
 
-.footer .fotter-social-links ul li a.dribbble {
-  background: #f7007a;
-  border-color: #f7007a;
+.footer .fotter-social-links ul li a.instagram {
+  background: #833ab4;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+  border-color: #833ab4;
 }
 
-.footer .fotter-social-links ul li a.google-plus {
+.footer .fotter-social-links ul li a.youtube {
   background: #d1062c;
   border-color: #d1062c;
 }
