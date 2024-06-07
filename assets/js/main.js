@@ -59,13 +59,7 @@ $(function ($) {
         target: '#mainmenu',
         offset: 100
     });
-    //   magnific popup activation
-    $('.video-play-btn').magnificPopup({
-        type: 'video'
-    });
-    $('.img-popup').magnificPopup({
-        type: 'image'
-    });
+
 
     //Aos Active js
     AOS.init({
