@@ -2461,7 +2461,7 @@ select:focus {
   border: 0px;
   color: #fff;
   font-size: 16px;
-  padding: 0px 25px;
+  padding: 0px 1.5rem;
   background: #da1c33;
   transition: all 0.3s ease-in;
 }
@@ -3608,7 +3608,7 @@ select:focus {
 }
 
 .home5 .board-section {
-  padding: 15px 0px 120px;
+  padding: 15px 0px 4rem;
 }
 
 .home5 .video {

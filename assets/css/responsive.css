@@ -203,7 +203,8 @@
     }
 
     .navigation .navbar .navbar-brand img {
-        filter: unset;
+        max-width: 140px;
+        filter: brightness(0);
     }
 
     .navigation {
@@ -272,7 +273,7 @@
     }
 
     .whaybest {
-        padding: 120px 0px 97px;
+        padding: 6rem 0px 4rem;
     }
 
     .whaybest .feature-list {
@@ -292,7 +293,7 @@
     }
 
     .feature {
-        padding: 100px 0px 88px;
+        padding: 4rem 0px 3rem;
     }
 
     .dealofweek .deal-slider-area .content .left-area img {
@@ -308,11 +309,11 @@
     }
 
     .faq {
-        padding: 100px 0px 100px;
+        padding: 6rem 0px 4rem;
     }
 
     .contact {
-        padding: 100px 0px 100px;
+        padding: 0;
     }
 
     .dealofweek .deal-slider-area .content .right-area {
@@ -402,7 +403,7 @@
     }
 
     .footer .copy-bg {
-        margin-top: 96px;
+        margin-top: 2rem;
     }
 
     .hero-area .right-img .discount-circle {
@@ -545,7 +546,7 @@
     }
 
     .hero-area {
-        padding: 160px 0px 94px;
+        padding: 7rem 0px 3rem;
     }
 
     .hero-area .left-content .content .title {
