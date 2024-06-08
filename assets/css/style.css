@@ -1208,7 +1208,7 @@ select:focus {
 ------------------------------*/
 .hero-area {
   position: relative;
-  padding: 365px 0px 230px;
+  padding: 15rem 0px 230px;
   background: url(../images/heroarea.jpg);
   background-position: center;
   background-size: cover;
@@ -1236,7 +1236,6 @@ select:focus {
 
 .hero-area .left-content .content .links {
   margin-top: 42px;
-  padding-right: 15px;
 }
 
 .hero-area .left-content .content .links a {
@@ -1280,18 +1279,29 @@ select:focus {
 
 .hero-area .right-img .img {
   position: absolute;
-  top: -230px;
+  top: -100px;
   left: 100px;
   max-width: 500px;
   width: auto;
   animation: shapeani3 5s linear infinite;
 }
 
+.navbar-collapse {
+  padding-top: 1rem;
+}
+
+.navbar-collapse li {
+  border-bottom: 1px solid #e3dede;
+}
+
+.navbar-collapse li:last-child {
+  border-bottom: none;
+}
 /*---------------------------
 ** About Area Start
 ---------------------------*/
 .about {
-  padding: 110px 0px 120px;
+  padding: 4rem 0px 3rem;
   position: relative;
 }
 
@@ -1410,10 +1420,7 @@ select:focus {
 }
 
 .whaybest .feature-list li {
-  max-width: 50%;
-  flex: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px;
   list-style: none;
   cursor: pointer;
   margin-bottom: 8px;
@@ -2431,12 +2438,22 @@ select:focus {
 }
 
 .specs table {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .newsletter-form-area {
   position: relative;
   text-align: center;
+}
+
+.newsletter-form-area p {
+  color: white;
+  font-size: 1rem;
+  margin: 1rem auto 0;
+}
+
+.newsletter-form-area p.footer {
+  color: #2e2e2e;
 }
 
 .newsletter-form-area input {

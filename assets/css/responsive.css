@@ -152,8 +152,6 @@
 
     .hero-area .right-img .img {
         position: relative;
-        animation: none;
-
     }
 
     .navigation .navbar {
@@ -212,7 +210,7 @@
     }
 
     .navigation .navbar #mainmenu ul .nav-item .nav-link {
-        color: #242424;
+        color: #424040;
     }
 
     .navigation .navbar #mainmenu ul .nav-item .nav-link::before {
@@ -252,9 +250,9 @@
 
     .whaybest .about-img img {
         animation: unset;
-        max-width: 350px;
+        max-width: 100%;
         display: inline-block;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
 
     .center-feature img {
@@ -363,7 +361,7 @@
     .home5 .testimonial-area::before,
     .home5 .faq::before {
         border-radius: 0px;
-        
+
     }
 
     .home9 .hero-area .right-img {
