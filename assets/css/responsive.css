@@ -254,7 +254,7 @@
         animation: unset;
         max-width: 350px;
         display: inline-block;
-        margin-bottom: 42px;
+        margin-bottom: 0;
     }
 
     .center-feature img {
@@ -285,7 +285,7 @@
     }
 
     .whaybest .row-one {
-        margin-bottom: 77px;
+        margin-bottom: 0;
     }
 
     .feature .section-title {
@@ -363,6 +363,7 @@
     .home5 .testimonial-area::before,
     .home5 .faq::before {
         border-radius: 0px;
+        
     }
 
     .home9 .hero-area .right-img {
@@ -420,7 +421,6 @@
     .whaybest .about-img img,
     .hero-area .right-img .img,
     .dealofweek .deal-slider-area .content .left-area img {
-        max-width: 250px;
         width: 100%;
     }
 
