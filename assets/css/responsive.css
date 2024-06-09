@@ -244,6 +244,14 @@
         overflow: auto;
     }
 
+    .navbar-collapse li {
+        border-bottom: 1px solid #e3dede;
+    }
+
+    .navbar-collapse li:last-child {
+        border-bottom: none;
+    }
+
     .about .box {
         margin-bottom: 30px;
     }
@@ -280,10 +288,6 @@
 
     .whaybest .feature-list li {
         margin-bottom: 22px;
-    }
-
-    .whaybest .row-one {
-        margin-bottom: 0;
     }
 
     .feature .section-title {

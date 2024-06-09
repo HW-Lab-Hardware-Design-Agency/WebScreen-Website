@@ -1290,13 +1290,6 @@ select:focus {
   padding-top: 1rem;
 }
 
-.navbar-collapse li {
-  border-bottom: 1px solid #e3dede;
-}
-
-.navbar-collapse li:last-child {
-  border-bottom: none;
-}
 /*---------------------------
 ** About Area Start
 ---------------------------*/
@@ -1381,10 +1374,6 @@ select:focus {
   position: relative;
   padding: 110px 0px 83px;
   background: #F7F9FF;
-}
-
-.whaybest .row-one {
-  margin-bottom: 55px;
 }
 
 .whaybest .info .info-title {
