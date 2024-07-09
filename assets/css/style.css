@@ -3429,13 +3429,13 @@ select:focus {
 }
 
 /* 404 Area End */
-.home5 .hero-area {
+.webscreen .hero-area {
   position: relative;
   background: none;
   overflow: hidden;
 }
 
-.home5 .hero-area::before {
+.webscreen .hero-area::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -3447,7 +3447,7 @@ select:focus {
   border-radius: 0px 0px 300px 0px;
 }
 
-.home5 .hero-area .shape {
+.webscreen .hero-area .shape {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3469,30 +3469,30 @@ select:focus {
   }
 }
 
-.home5 .hero-area .discount-circle-inner {
+.webscreen .hero-area .discount-circle-inner {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .about {
+.webscreen .about {
   position: relative;
 }
 
-.home5 .about .box {
+.webscreen .about .box {
   margin-bottom: 30px;
   background: #fff;
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 30px 0px 30px 0px;
 }
 
-.home5 .about .box .inner-box .icon i {
+.webscreen .about .box .inner-box .icon i {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .about .box::after {
+.webscreen .about .box::after {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   opacity: 1;
@@ -3503,34 +3503,34 @@ select:focus {
   transition: all 0.3s ease-in;
 }
 
-.home5 .about .box:hover {
+.webscreen .about .box:hover {
   transform: translateY(0px) !important;
 }
 
-.home5 .about .box:hover::after {
+.webscreen .about .box:hover::after {
   height: 100%;
 }
 
-.home5 .about .box:hover .icon i {
+.webscreen .about .box:hover .icon i {
   background: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .about .box:hover .title {
+.webscreen .about .box:hover .title {
   color: #fff;
 }
 
-.home5 .about .box:hover .text {
+.webscreen .about .box:hover .text {
   color: #fff;
 }
 
-.home5 .whaybest {
+.webscreen .whaybest {
   position: relative;
   background: none;
 }
 
-.home5 .whaybest::before {
+.webscreen .whaybest::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -3542,7 +3542,18 @@ select:focus {
   border-radius: 200px 0px 200px 0px;
 }
 
-.home5 .whaybest .shape {
+iframe#render {
+  border-radius: 200px 0px 200px 0px;
+  overflow: hidden;
+  border: none;
+}
+
+.webscreen .render {
+  border-radius: 200px 0px 200px 0px;
+  overflow: hidden;
+}
+
+.webscreen .whaybest .shape {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -3550,38 +3561,38 @@ select:focus {
   animation: sclanmi3 7s linear infinite;
 }
 
-.home5 .whaybest .info .info-title {
+.webscreen .whaybest .info .info-title {
   color: #fff;
 }
 
-.home5 .whaybest .info .feature-list li .icon i {
+.webscreen .whaybest .info .feature-list li .icon i {
   background: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .whaybest .info .feature-list li .content h4 {
+.webscreen .whaybest .info .feature-list li .content h4 {
   color: #fff;
 }
 
-.home5 .whaybest .info .feature-list li .content p {
+.webscreen .whaybest .info .feature-list li .content p {
   color: #fff;
 }
 
-.home5 .feature .feature-box .icon-area .icon i {
+.webscreen .feature .feature-box .icon-area .icon i {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .dealofweek {
+.webscreen .dealofweek {
   position: relative;
   background: none;
   overflow: hidden;
 }
 
-.home5 .dealofweek::before {
+.webscreen .dealofweek::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -3591,7 +3602,7 @@ select:focus {
   border-radius: 200px 0px 200px 0px;
 }
 
-.home5 .dealofweek .shape {
+.webscreen .dealofweek .shape {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -3599,31 +3610,31 @@ select:focus {
   animation: sclanmi3 7s linear infinite;
 }
 
-.home5 .dealofweek .deal-slider-area .section-title .title {
+.webscreen .dealofweek .deal-slider-area .section-title .title {
   font-size: 2rem;
   margin-top: 50px;
 }
 
-.home5 .dealofweek .deal-slider-area {
+.webscreen .dealofweek .deal-slider-area {
   box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.219), 0px 0px 0px 20px rgba(255, 255, 255, 0.219), 0px 0px 0px 30px rgba(255, 255, 255, 0.219);
 }
 
-.home5 .pricing .product-slider .owl-controls .owl-nav div:hover {
+.webscreen .pricing .product-slider .owl-controls .owl-nav div:hover {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .board-section {
-  padding: 15px 0px 4rem;
+.webscreen .board-section {
+  padding: 110px 0px 95px;
 }
 
-.home5 .video {
+.webscreen .video {
   position: relative;
   background: none;
   overflow: hidden;
 }
 
-.home5 .video::before {
+.webscreen .video::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -3635,7 +3646,7 @@ select:focus {
   border-radius: 200px 0px 200px 0px;
 }
 
-.home5 .video .shape {
+.webscreen .video .shape {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3643,30 +3654,30 @@ select:focus {
   animation: sclanmi3 7s linear infinite;
 }
 
-.home5 .video .section-title .title {
+.webscreen .video .section-title .title {
   color: #fff;
 }
 
-.home5 .video .section-title p {
+.webscreen .video .section-title p {
   color: #fff;
 }
 
-.home5 .video .video-play-btn i,
-.home5 .video .fun-box .inner-content2 .icon i,
-.home5 .video .fun-box .inner-content3 .icon i {
+.webscreen .video .video-play-btn i,
+.webscreen .video .fun-box .inner-content2 .icon i,
+.webscreen .video .fun-box .inner-content3 .icon i {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .testimonial-area {
+.webscreen .testimonial-area {
   position: relative;
   background: none;
   overflow: hidden;
 }
 
-.home5 .testimonial-area::before {
+.webscreen .testimonial-area::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -3678,7 +3689,7 @@ select:focus {
   border-radius: 200px 0px 200px 0px;
 }
 
-.home5 .testimonial-area .shape {
+.webscreen .testimonial-area .shape {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -3686,45 +3697,45 @@ select:focus {
   animation: sclanmi3 7s linear infinite;
 }
 
-.home5 .testimonial-area .section-title .title {
+.webscreen .testimonial-area .section-title .title {
   color: #fff;
 }
 
-.home5 .testimonial-area .section-title p {
+.webscreen .testimonial-area .section-title p {
   color: #fff;
 }
 
-.home5 .testimonial-area .testimonial-slider .client {
+.webscreen .testimonial-area .testimonial-slider .client {
   border-radius: 4px;
 }
 
-.home5 .testimonial-area .testimonial-slider .owl-controls .owl-nav div {
+.webscreen .testimonial-area .testimonial-slider .owl-controls .owl-nav div {
   background: #fff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
-.home5 .testimonial-area .testimonial-slider .owl-controls .owl-nav div:hover {
+.webscreen .testimonial-area .testimonial-slider .owl-controls .owl-nav div:hover {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .testimonial-area .testimonial-slider .client .client-image::after {
+.webscreen .testimonial-area .testimonial-slider .client .client-image::after {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .dealofweek .download-buttons {
+.webscreen .dealofweek .download-buttons {
   margin-top: 55px;
   display: block;
   text-align: center;
 }
 
-.home5 .dealofweek .download-buttons .text {
+.webscreen .dealofweek .download-buttons .text {
   font-size: 16px;
   line-height: 26px;
 }
 
-.home5 .dealofweek .download-buttons a {
+.webscreen .dealofweek .download-buttons a {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   display: inline-block;
@@ -3735,23 +3746,23 @@ select:focus {
   color: #fff;
 }
 
-.home5 .dealofweek .download-buttons a i {
+.webscreen .dealofweek .download-buttons a i {
   font-size: 24px;
 }
 
-.home5 .dealofweek .newsletter-form-area button {
+.webscreen .dealofweek .newsletter-form-area button {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   cursor: pointer;
 }
 
-.home5 .faq {
+.webscreen .faq {
   position: relative;
   background: none;
   overflow: hidden;
 }
 
-.home5 .faq::before {
+.webscreen .faq::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -3764,7 +3775,7 @@ select:focus {
   z-index: -1;
 }
 
-.home5 .faq .shape {
+.webscreen .faq .shape {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -3772,87 +3783,87 @@ select:focus {
   animation: sclanmi3 7s linear infinite;
 }
 
-.home5 .faq .section-title .title {
+.webscreen .faq .section-title .title {
   color: #fff;
 }
 
-.home5 .faq .section-title p {
+.webscreen .faq .section-title p {
   color: #fff;
 }
 
-.home5 .faq .accordion .panel::after {
+.webscreen .faq .accordion .panel::after {
   display: none;
 }
 
-.home5 .contact .info-box .left .icon i {
+.webscreen .contact .info-box .left .icon i {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .contact .info-box .left .icon::after {
+.webscreen .contact .info-box .left .icon::after {
   border: 1px dashed #e42d43;
   animation: shapeani2 10s linear infinite;
 }
 
-.home5 .footer {
+.webscreen .footer {
   background: #dbd5c9;
 }
 
-.home5 .bottomtotop i {
+.webscreen .bottomtotop i {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .compare-section .compare-table .price,
-.home5 .pricing .product-slider .item .single-product .content .price .new-price,
-.home5 .dealofweek .deal-slider-area .content .right-area .price p span {
+.webscreen .compare-section .compare-table .price,
+.webscreen .pricing .product-slider .item .single-product .content .price .new-price,
+.webscreen .dealofweek .deal-slider-area .content .right-area .price p span {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.home5 .subscribe-section img {
+.webscreen .subscribe-section img {
   margin-top: 35px;
 }
 
-.home5 .footer .copy-bg {
+.webscreen .footer .copy-bg {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.home5 .footer .footer-info-area .footer-logo img {
+.webscreen .footer .footer-info-area .footer-logo img {
   max-width: 100%;
 }
 
-.home5 .navigation .navbar #mainmenu ul .nav-item.dropdown:hover .dropdown-menu .dropdown-item:hover {
+.webscreen .navigation .navbar #mainmenu ul .nav-item.dropdown:hover .dropdown-menu .dropdown-item:hover {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .preloader-inner {
+.webscreen .preloader-inner {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .navigation.stiky-nav .navbar #mainmenu ul .nav-item .nav-link:hover::before,
-.home5 .navigation.stiky-nav .navbar #mainmenu ul .nav-item .nav-link.active::before {
+.webscreen .navigation.stiky-nav .navbar #mainmenu ul .nav-item .nav-link:hover::before,
+.webscreen .navigation.stiky-nav .navbar #mainmenu ul .nav-item .nav-link.active::before {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .navigation.stiky-nav .navbar #mainmenu ul .nav-item .nav-link::before {
+.webscreen .navigation.stiky-nav .navbar #mainmenu ul .nav-item .nav-link::before {
   background: #D31027;
   background: linear-gradient(to right, #EA384D, #D31027);
 }
 
-.home5 .footer {
+.webscreen .footer {
   position: relative;
   overflow: hidden;
 }
 
-.home5 .footer .shape {
+.webscreen .footer .shape {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3860,12 +3871,12 @@ select:focus {
   animation: sclanmi3 7s linear infinite;
 }
 
-.home5 .pricing .mybtn-bg {
+.webscreen .pricing .mybtn-bg {
   top: 50%;
   transform: translateY(-50%);
 }
 
-.home5 .contact .contact-form-wrapper .mybtn3.mybtn-bg {
+.webscreen .contact .contact-form-wrapper .mybtn3.mybtn-bg {
   margin-top: 10px;
 }
 

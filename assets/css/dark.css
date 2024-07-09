@@ -47,7 +47,7 @@ i,
 }
 
 .preloader-inner,
-.home5 .preloader-inner,
+.webscreen .preloader-inner,
 .home7 .preloader-inner
 {
     background: #001232;
@@ -63,13 +63,13 @@ i,
 .video,
 .testimonial-area,
 .faq,
-.home5 .hero-area::before,
-.home5 .whaybest::before,
-.home5 .dealofweek::before,
-.home5 .video::before,
-.home5 .testimonial-area::before,
-.home5 .faq::before,
-.home5 .footer,
+.webscreen .hero-area::before,
+.webscreen .whaybest::before,
+.webscreen .dealofweek::before,
+.webscreen .video::before,
+.webscreen .testimonial-area::before,
+.webscreen .faq::before,
+.webscreen .footer,
 
 .home7 .hero-area::before,
 .home7 .whaybest::before,
@@ -98,8 +98,8 @@ i,
 .contact .contact-form-wrapper,
 .navigation.stiky-nav,
 .dealofweek .newsletter-form-area input,
-.home5 .about .box,
-.home5 .testimonial-area .testimonial-slider .owl-controls .owl-nav div,
+.webscreen .about .box,
+.webscreen .testimonial-area .testimonial-slider .owl-controls .owl-nav div,
 .home7 .about .box,
 .home7 .testimonial-area .testimonial-slider .owl-controls .owl-nav div
 {
@@ -107,7 +107,7 @@ i,
 }
 
 
-.home5 .dealofweek .deal-slider-area {
+.webscreen .dealofweek .deal-slider-area {
     box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.1), 0px 0px 0px 20px rgba(255, 255, 255, 0.1), 0px 0px 0px 30px rgba(255, 255, 255, 0.1);
 }
 .home7 .dealofweek .deal-slider-area {
