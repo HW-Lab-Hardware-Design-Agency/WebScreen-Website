@@ -303,10 +303,6 @@
         margin-bottom: 50px;
     }
 
-    .pricing .product-slider .item .single-product .img img {
-        max-width: 220px;
-    }
-
     .faq .section-title.extra .title {
         margin-bottom: 18px;
     }
@@ -441,7 +437,6 @@
     }
 
     .index2 .pricing .product-slider .item .single-product .img img {
-        max-width: 280px;
         margin: 0 auto;
     }
 
