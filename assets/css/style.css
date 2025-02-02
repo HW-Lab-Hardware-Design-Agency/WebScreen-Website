@@ -1208,7 +1208,7 @@ select:focus {
 ------------------------------*/
 .hero-area {
   position: relative;
-  padding: 15rem 0px 230px;
+  padding: 15rem 0px 180px;
   background: url(../images/heroarea.jpg);
   background-position: center;
   background-size: cover;
@@ -2550,7 +2550,8 @@ select:focus {
 }
 
 .footer .fotter-social-links ul li a.tiktok,
-.footer .fotter-social-links ul li a.x {
+.footer .fotter-social-links ul li a.x,
+.footer .fotter-social-links ul li a.github {
   background: black;
   border-color: black;
 }
@@ -3880,3 +3881,10 @@ iframe#render {
   margin-top: 10px;
 }
 
+.webscreen .header-logos {
+  padding-top: 3rem;
+}
+
+.webscreen .header-logos img {
+  margin: 0 1rem;
+}
