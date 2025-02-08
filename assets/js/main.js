@@ -72,7 +72,7 @@ $(function ($) {
     $deal_slider.owlCarousel({
         loop: true,
         nav: false,
-        autoplay: false,
+        autoplay: true,
         dots: false,
         margin: 30,
         autoplayTimeout: 3000,
@@ -132,7 +132,7 @@ $(function ($) {
         nav: true, navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         dots: false,
         margin: 30,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 8000,
         smartSpeed: 1500,
         responsive: {
