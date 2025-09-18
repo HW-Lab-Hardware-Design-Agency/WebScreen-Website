@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main landing page -->
+  <url>
+    <loc>https://webscreen.cc/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://webscreen.cc/assets/images/webscreen_black_1_500.png</image:loc>
+      <image:caption>WebScreen hackable gadget with AMOLED display showing interface</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://webscreen.cc/assets/images/webscreen_light_1_400.png</image:loc>
+      <image:caption>WebScreen gadget showing dashboard with system metrics</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Setup guide page -->
+  <url>
+    <loc>https://webscreen.cc/setup.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://webscreen.cc/assets/images/webscreen-running.gif</image:loc>
+      <image:caption>WebScreen hackable gadget running with AMOLED display showing interface and animations</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://webscreen.cc/assets/images/webscreen-with-accessories.png</image:loc>
+      <image:caption>WebScreen gadget with USB-C cable and accessories for setup</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 3D model viewer -->
+  <url>
+    <loc>https://webscreen.cc/3d_render/</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

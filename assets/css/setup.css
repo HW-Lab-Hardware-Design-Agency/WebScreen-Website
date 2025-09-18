@@ -1,0 +1,359 @@
+/* Setup Guide Specific Styles */
+.hero-area {
+  position: relative;
+  padding: 11rem 0px 90px;
+}
+
+/* Navigation Pills / Tabs */
+.setup-tabs .nav-link {
+  background: #fff;
+  color: #333;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.setup-tabs .nav-link:hover {
+  background: #f8f9fa;
+}
+
+.setup-tabs .nav-link.active {
+  background: #D31027;
+  background: linear-gradient(to right, #EA384D, #D31027);
+  color: white;
+  border-color: #D31027;
+}
+
+/* Step Numbers */
+.step-number {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #D31027;
+  background: linear-gradient(to right, #EA384D, #D31027);
+  color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Setup Content */
+.setup-content h3 {
+  color: #2e2e2e;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.setup-content h5 {
+  color: #2e2e2e;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.setup-content p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.setup-image {
+  text-align: center;
+}
+
+.setup-image img {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.feature-list li {
+  padding: 10px 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.feature-list li i {
+  color: #D31027;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Code Blocks - CodeMirror Styling */
+.CodeMirror {
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  height: auto;
+}
+
+.CodeMirror-scroll {
+  min-height: 60px;
+  max-height: 400px;
+}
+
+/* Override Monokai theme colors for better contrast */
+.cm-s-monokai.CodeMirror {
+  background: #1e1e1e;
+}
+
+.cm-s-monokai .CodeMirror-gutters {
+  background: #2a2a2a;
+  border-right: 1px solid #3a3a3a;
+}
+
+.cm-s-monokai .CodeMirror-linenumber {
+  color: #6e6e6e;
+}
+
+/* Fallback for non-JS users */
+.code-block {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Indicators */
+.button-indicator {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #D31027;
+  background: linear-gradient(to right, #EA384D, #D31027);
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 3px;
+}
+
+/* Warning and Success Boxes */
+.warning-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  color: #856404;
+}
+
+.warning-box i {
+  color: #ffc107;
+  margin-right: 8px;
+}
+
+.success-box {
+  background: #d4edda;
+  border-left: 4px solid #28a745;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  color: #155724;
+}
+
+.success-box i {
+  color: #28a745;
+  margin-right: 8px;
+}
+
+/* Accordion Overrides for Advanced Config */
+#advanced .panel {
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+#advanced .panel-title {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 20px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2e2e2e;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#advanced .panel-title:hover {
+  color: #D31027;
+}
+
+#advanced .panel-title::after {
+  position: absolute;
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #D31027;
+  transition: transform 0.3s ease;
+}
+
+#advanced .panel-title[aria-expanded="true"]::after {
+  content: "\f106";
+}
+
+#advanced .panel-body {
+  padding: 0 25px 20px;
+}
+
+/* Step Row Background */
+.setup-step-row {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 30px 0 !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.setup-step-row ol {
+  padding: 0;
+}
+
+.setup-step-row ol li {
+  margin: 10px 0;
+}
+
+/* Next Steps Section */
+#next-steps .box {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#next-steps .btn-main-sm {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #D31027;
+  background: linear-gradient(to right, #EA384D, #D31027);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+#next-steps .btn-main-sm:hover {
+  background: #EA384D;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(211, 16, 39, 0.3);
+}
+
+/* Button Main Style */
+.btn-main {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #D31027;
+  background: linear-gradient(to right, #EA384D, #D31027);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-main:hover {
+  background: #EA384D;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(211, 16, 39, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-main span {
+  color: white;
+}
+
+/* Override footer background to match index.html */
+.webscreen .footer {
+  background: #dbd5c9;
+}
+
+/* Hero header title and subtitle should be white */
+#home .title,
+#home .subtitle {
+  color: white;
+}
+
+#home .title {
+  font-weight: 700;
+}
+
+/* Edit on GitHub floating button */
+.edit-on-github {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  bottom: 80px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.edit-on-github:hover {
+  background: #D31027;
+  background: linear-gradient(to right, #EA384D, #D31027);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(211, 16, 39, 0.4);
+}
+
+.edit-on-github i {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .setup-tabs .nav-link {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .setup-content h3 {
+    font-size: 24px;
+  }
+
+  .setup-content h5 {
+    font-size: 18px;
+  }
+
+  .code-block {
+    font-size: 12px;
+    padding: 15px;
+  }
+}

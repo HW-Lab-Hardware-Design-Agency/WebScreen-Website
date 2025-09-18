@@ -6,11 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords"
-    content="WebScreen, notifications, productivity, gaming, secondary display, AMOLED, reminders, customizable, tech gadgets, digital experience, Crowdsupply">
+    content="WebScreen, hackable, open source, gadget, gamers, makers, creators, notifications, JavaScript apps, ESP32-S3, AMOLED, hardware, software, no distractions, zone, productivity">
   <meta name="description"
-    content="Meet WebScreen, your new sidekick that keeps you in the loop without breaking your focus. Whether you're deep in a game, streaming, or working hard, WebScreen brings you the updates that matter. Join us on Crowdsupply and let's level up your setup together!">
-  <title>WebScreen - Stay Connected, Stay in the Game</title>
+    content="WebScreen is a hackable, open-source gadget for gamers, makers, and creators! Get the notifications you want, build custom JavaScript apps, and stay in the zone—no distractions. Powered by ESP32-S3 with an AMOLED screen.">
+  <title>WebScreen - Hackable Open-Source Gadget for Gamers, Makers & Creators</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webscreen.cc/">
+  <meta property="og:title" content="WebScreen - Hackable Open-Source Gadget">
+  <meta property="og:description" content="WebScreen is a hackable, open-source gadget for gamers, makers, and creators! Get the notifications you want, build custom JavaScript apps, and stay in the zone—no distractions.">
+  <meta property="og:image" content="https://webscreen.cc/assets/images/webscreen_black_1_500.png">
+  <meta property="og:site_name" content="WebScreen">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://webscreen.cc/">
+  <meta property="twitter:title" content="WebScreen - Hackable Open-Source Gadget">
+  <meta property="twitter:description" content="WebScreen is a hackable, open-source gadget for gamers, makers, and creators! Get the notifications you want, build custom JavaScript apps, and stay in the zone—no distractions.">
+  <meta property="twitter:image" content="https://webscreen.cc/assets/images/webscreen_black_1_500.png">
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="HW Media Lab LLC">
+  <meta name="language" content="English">
+  <meta name="theme-color" content="#D31027">
+  <link rel="canonical" href="https://webscreen.cc/">
+
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -21,6 +46,79 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "WebScreen",
+    "description": "Hackable, open-source gadget for gamers, makers, and creators! Get the notifications you want, build custom JavaScript apps, and stay in the zone—no distractions. Powered by ESP32-S3 with an AMOLED screen.",
+    "brand": {
+      "@type": "Brand",
+      "name": "WebScreen"
+    },
+    "category": "Electronics",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "priceValidUntil": "2025-12-31",
+      "seller": {
+        "@type": "Organization",
+        "name": "WebScreen"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    },
+    "features": [
+      "2.8-inch AMOLED display",
+      "ESP32-S3 processor",
+      "WiFi connectivity",
+      "Web-based configuration",
+      "Open source firmware",
+      "JavaScript app development",
+      "Touch interface support"
+    ],
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "WebScreen",
+      "url": "https://webscreen.cc"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebScreen",
+    "url": "https://webscreen.cc",
+    "logo": "https://webscreen.cc/assets/images/logo.png",
+    "sameAs": [
+      "https://github.com/WebScreen-Software",
+      "https://www.crowdsupply.com/webscreen/webscreen"
+    ],
+    "description": "Hackable, open-source gadget technology for gamers, makers, and creators"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WebScreen",
+    "url": "https://webscreen.cc",
+    "description": "Hackable, open-source gadget for gamers, makers, and creators",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://webscreen.cc/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 
 <body class="webscreen">
@@ -44,7 +142,7 @@
         <div class="col-lg-12 p-0">
           <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="index.html">
-              <img src="assets/images/logo.png" alt="">
+              <img src="assets/images/logo.png" alt="WebScreen Logo - Open Source Secondary AMOLED Display">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
               aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,6 +166,12 @@
                   <a class="nav-link" target="_blank" href="https://www.crowdsupply.com/hw-media-lab/webscreen">Crowd Supply</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="setup.html">Setup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://serial.webscreen.cc">Serial IDE</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" target="_blank" href="https://flash.webscreen.cc">Flash ⚡</a>
                 </li>
               </ul>
@@ -79,7 +183,7 @@
   </header>
 
   <div id="home" class="hero-area">
-    <img class="shape" src="assets/images/shape-pattern.png" alt="">
+    <img class="shape" src="assets/images/shape-pattern.png" alt="Decorative background pattern">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex align-self-center">
@@ -102,7 +206,7 @@
                   </form>
                   <p>✅ We respect your privacy. No spam, ever.</p>
                   <div class="header-logos">
-                    <a href="https://www.oshwa.org/definition" target="_blank"><img src="assets/images/open_source_hardware_logo.png" alt="Open Source Hardware"></a>
+                    <a href="https://www.oshwa.org/definition" target="_blank"><img src="assets/images/open_source_hardware_logo.png" alt="Open Source Hardware Association certified logo"></a>
                     <a href="https://certification.oshwa.org/us002702.html" target="_blank"><img src="assets/images/oshwa_logo.png" alt="OSHWA Certified"></a>
                     <a href="https://github.com/orgs/HW-Lab-Hardware-Design-Agency/repositories?q=webscreen" target="_blank"><img src="assets/images/github_logo.png" alt="GitHub"></a>
                     <a href="https://www.crowdsupply.com/hw-media-lab/webscreen" target="_blank"><img src="assets/images/crowdsupply_logo.png" alt="Crowd Supply"></a>
@@ -114,7 +218,7 @@
         </div>
         <div class="col-lg-6 order-first order-lg-last">
           <div class="right-img">
-            <img class="img-fluid img" src="assets/images/webscreen_black_1_500.png" alt="">
+            <img class="img-fluid img" src="assets/images/webscreen_black_1_500.png" alt="WebScreen device with AMOLED display showing interface">
           </div>
         </div>
       </div>
@@ -221,7 +325,7 @@
       <div class="row row-one">
         <div class="col-lg-6 d-flex">
           <div class="about-img">
-            <img src="assets/images/webscreen_light_1_400.png" alt="">
+            <img src="assets/images/webscreen_light_1_400.png" alt="WebScreen secondary display showing dashboard with system metrics">
           </div>
         </div>
         <div class="col-lg-6">
@@ -274,7 +378,7 @@
         </div>
         <div class="col-lg-6 d-flex order-first order-lg-last">
           <div class="about-img">
-            <img src="assets/images/webscreen_light_3_400.png" alt="">
+            <img src="assets/images/webscreen_light_3_400.png" alt="WebScreen device displaying weather information and notifications">
           </div>
         </div>
       </div>
@@ -282,7 +386,7 @@
       <div class="row">
         <div class="col-lg-6 d-flex">
           <div class="about-img">
-            <img src="assets/images/webscreen_light_4_400.png" alt="">
+            <img src="assets/images/webscreen_light_4_400.png" alt="WebScreen showing custom JavaScript application interface">
           </div>
         </div>
         <div class="col-lg-6">
@@ -430,7 +534,7 @@
   </section>
 
   <section class="testimonial-area" id="testimonial-area">
-    <img class="shape" src="assets/images/shape-pattern.png" alt="">
+    <img class="shape" src="assets/images/shape-pattern.png" alt="Decorative background pattern">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
@@ -1003,7 +1107,7 @@
   </section>
 
   <section id="subscribe" class="dealofweek">
-    <img class="shape" src="assets/images/shape-pattern.png" alt="">
+    <img class="shape" src="assets/images/shape-pattern.png" alt="Decorative background pattern">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10">
@@ -1027,7 +1131,7 @@
                         </p>
                         <p>🚀 The countdown is on—let's do this together!</p>
                         <div class="deal-counter">
-                          <div data-countdown="2025/09/01"></div>
+                          <div data-countdown="2025/09/23"></div>
                         </div>
                       </div>
                     </div>

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="WebScreen, setup, guide, tutorial, ESP32-S3, AMOLED, configuration, getting started, SD card, firmware, flash, hackable, gadget, gamers, makers, creators">
+  <meta name="description"
+    content="Complete setup guide for WebScreen - Learn how to configure, flash firmware, and start using your hackable, open-source gadget with step-by-step instructions. Perfect for gamers, makers, and creators!">
+  <title>WebScreen Setup Guide - Flash Firmware & Configure Your Hackable Gadget</title>
+  <link rel="canonical" href="https://webscreen.cc/setup.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://webscreen.cc/setup.html">
+  <meta property="og:title" content="WebScreen Setup Guide - Flash Firmware & Configure Your Hackable Gadget">
+  <meta property="og:description" content="Complete setup guide for WebScreen - Learn how to configure, flash firmware, and start using your hackable, open-source gadget with step-by-step instructions. Perfect for gamers, makers, and creators!">
+  <meta property="og:image" content="https://webscreen.cc/assets/images/webscreen-running.gif">
+  <meta property="og:image:alt" content="WebScreen setup guide showing firmware flashing and configuration">
+  <meta property="og:site_name" content="WebScreen">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://webscreen.cc/setup.html">
+  <meta property="twitter:title" content="WebScreen Setup Guide - Flash Firmware & Configure Your Hackable Gadget">
+  <meta property="twitter:description" content="Complete setup guide for WebScreen - Learn how to configure, flash firmware, and start using your hackable, open-source gadget. Perfect for gamers, makers, and creators!">
+  <meta property="twitter:image" content="https://webscreen.cc/assets/images/webscreen-running.gif">
+  <meta property="twitter:image:alt" content="WebScreen setup guide">
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="WebScreen Team">
+  <meta name="theme-color" content="#D31027">
+  <meta name="msapplication-navbutton-color" content="#D31027">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#D31027">
+
+  <!-- Article specific metadata -->
+  <meta property="article:author" content="WebScreen Team">
+  <meta property="article:section" content="Tutorial">
+  <meta property="article:tag" content="WebScreen">
+  <meta property="article:tag" content="Setup">
+  <meta property="article:tag" content="ESP32">
+  <meta property="article:tag" content="AMOLED">
+  <meta property="article:tag" content="Firmware">
+  <meta property="article:tag" content="Tutorial">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/setup.css">
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "WebScreen Setup Guide - Flash Firmware & Configure Your Hackable Gadget",
+    "description": "Complete step-by-step setup guide for WebScreen - Learn how to configure, flash firmware, and start using your hackable, open-source gadget. Perfect for gamers, makers, and creators!",
+    "image": "https://webscreen.cc/assets/images/webscreen-running.gif",
+    "totalTime": "PT15M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "0"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "WebScreen device"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "USB-C cable"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Computer with web browser"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "MicroSD card (optional)"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "Web browser"
+      },
+      {
+        "@type": "HowToTool",
+        "name": "Arduino IDE (optional)"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Prepare Your WebScreen",
+        "text": "Connect your WebScreen to your computer using a USB-C cable and prepare for firmware flashing."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Choose Flashing Method",
+        "text": "Select between Web Flasher (recommended for beginners) or Arduino IDE (for advanced users)."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Flash Firmware",
+        "text": "Upload the WebScreen firmware to your device using your chosen method."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Configure Settings",
+        "text": "Set up WiFi connection and configure your WebScreen preferences."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Test Your Device",
+        "text": "Reset your WebScreen and verify it's working properly with the web interface."
+      }
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "WebScreen Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "WebScreen",
+      "url": "https://webscreen.cc"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "WebScreen Setup Guide - Flash Firmware & Configure Your Hackable Gadget",
+    "description": "Complete setup guide for WebScreen - Learn how to configure, flash firmware, and start using your hackable, open-source gadget with step-by-step instructions. Perfect for gamers, makers, and creators!",
+    "image": "https://webscreen.cc/assets/images/webscreen-running.gif",
+    "author": {
+      "@type": "Organization",
+      "name": "WebScreen Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "WebScreen",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://webscreen.cc/assets/images/logo.png"
+      }
+    },
+    "datePublished": "2024-01-01",
+    "dateModified": "2025-01-01",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://webscreen.cc/setup.html"
+    },
+    "articleSection": "Tutorial",
+    "keywords": ["WebScreen", "setup", "ESP32", "AMOLED", "firmware", "tutorial", "guide"]
+  }
+  </script>
+</head>
+
+<body class="webscreen setup">
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="cube-wrapper">
+        <div class="cube-folding">
+          <span class="leaf1"></span>
+          <span class="leaf2"></span>
+          <span class="leaf3"></span>
+          <span class="leaf4"></span>
+        </div>
+        <span class="loading" data-name="Loading">Loading</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo.png" alt="WebScreen Logo - Open Source Secondary AMOLED Display">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
+              aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#feature">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#marketplace">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://www.crowdsupply.com/hw-media-lab/webscreen">Crowd
+                    Supply</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="setup.html">Setup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://serial.webscreen.cc">Serial IDE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://flash.webscreen.cc">Flash ⚡</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="home" class="hero-area">
+    <img class="shape" src="assets/images/shape-pattern.png" alt="Decorative background pattern">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="content">
+            <h1 class="title">Setup Guide</h1>
+            <p class="subtitle">Get your WebScreen up and running in just a few minutes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Start Section -->
+  <section class="about" id="quick-start">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="section-title extra">
+            <h2 class="title">Choose Your Setup Method</h2>
+            <p>We offer two ways to get your WebScreen up and running. Choose the one that works best for you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Setup Method Tabs -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+          <ul class="nav nav-pills justify-content-center setup-tabs" id="setupTabs" role="tablist">
+            <li class="nav-item mr-3">
+              <a class="nav-link active" id="web-flasher-tab" data-toggle="tab" href="#web-flasher" role="tab">
+                <i class="fas fa-globe"></i> Web Flasher (Easy)
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="arduino-tab" data-toggle="tab" href="#arduino" role="tab">
+                <i class="fas fa-code"></i> Arduino IDE (Advanced)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="setupTabContent">
+        <!-- Web Flasher Method -->
+        <div class="tab-pane fade show active" id="web-flasher" role="tabpanel">
+          <!-- Step 1 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="setup-content">
+                <h3><span class="step-number">1</span> Prepare Your Hardware</h3>
+                <p>Before we begin, make sure you have:</p>
+                <ul class="feature-list">
+                  <li><i class="fas fa-check-circle"></i> WebScreen device</li>
+                  <li><i class="fas fa-check-circle"></i> USB-C cable for power and data</li>
+                  <li><i class="fas fa-check-circle"></i> MicroSD card (formatted as FAT32)</li>
+                  <li><i class="fas fa-check-circle"></i> Computer with Chrome or Edge browser</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="setup-image">
+                <img class="img-fluid" src="assets/images/webscreen-with-accessories.png"
+                  alt="WebScreen device with USB-C cable and accessories for setup">
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+              <div class="setup-content">
+                <h3><span class="step-number">2</span> Flash the Firmware</h3>
+
+                <h5>Connect Your WebScreen</h5>
+                <p>Connect your WebScreen to your computer using the USB-C cable.</p>
+
+                <h5>Enter Upload Mode</h5>
+                <ol>
+                  <li>Hold the <span class="button-indicator">BOOT</span> button</li>
+                  <li>Press <span class="button-indicator">RESET</span> once</li>
+                  <li>Release <span class="button-indicator">BOOT</span></li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+              <div class="setup-image">
+                <img class="img-fluid" src="assets/images/boot-reset-buttons.png"
+                  alt="WebScreen device showing BOOT and RESET button locations for firmware flashing">
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-12">
+              <div class="setup-content text-center">
+                <h3><span class="step-number">3</span> Use the Web Flasher</h3>
+                <ol class="text-left" style="max-width: 600px; margin: 0 auto;">
+                  <li>Open the Web Flasher in Chrome or Edge browser</li>
+                  <li>Click "Connect" and select your WebScreen device from the list</li>
+                  <li>Choose the latest firmware version</li>
+                  <li>Click "Flash" and wait for the process to complete</li>
+                </ol>
+                <div class="mt-4">
+                  <a href="https://flash.webscreen.cc" target="_blank" class="btn-main">
+                    <span>Open Web Flasher <i class="fas fa-external-link-alt ml-2"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 - SD Card -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="setup-content">
+                <h3><span class="step-number">4</span> Prepare the SD Card</h3>
+
+                <h5>Insert the SD Card</h5>
+                <p>Insert your FAT32-formatted microSD card into the SD card slot on your WebScreen.</p>
+
+                <img class="img-fluid mt-3 mb-3" src="assets/images/webscreen-with-sd.png"
+                  alt="WebScreen device with microSD card slot highlighted for storage expansion">
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="setup-content">
+                <h5>Create Configuration File</h5>
+                <p>Create a file named <code>webscreen.json</code> on your SD card:</p>
+
+                <div class="code-block">
+                  {
+                  "settings": {
+                  "wifi": {
+                  "ssid": "YourWiFiName",
+                  "pass": "YourWiFiPassword"
+                  }
+                  },
+                  "screen": {
+                  "background": "#2980b9",
+                  "foreground": "#00fff1"
+                  },
+                  "script": "app.js"
+                  }
+                </div>
+
+                <div class="warning-box mt-3">
+                  <i class="fas fa-exclamation-triangle"></i> Replace "YourWiFiName" and "YourWiFiPassword" with your
+                  actual WiFi credentials.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 - Reset and Test -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="setup-content">
+                <h3><span class="step-number">5</span> Reset and Test</h3>
+                <h5>Start Your WebScreen</h5>
+                <ol>
+                  <li>Press the <span class="button-indicator">RESET</span> button or reconnect power</li>
+                  <li>WebScreen will boot and connect to your WiFi</li>
+                  <li>The screen should display the default notification app</li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="setup-image">
+                <img class="img-fluid" src="assets/images/webscreen-running.gif"
+                  alt="WebScreen device running with AMOLED display showing interface and animations">
+              </div>
+            </div>
+          </div>
+
+          <!-- Success Message -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="success-box text-center">
+                <i class="fas fa-rocket"></i> <strong>Congratulations!</strong> Your WebScreen is now set up and ready
+                to use!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arduino IDE Method -->
+        <div class="tab-pane fade" id="arduino" role="tabpanel">
+          <!-- Step 1 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-12">
+              <div class="setup-content">
+                <h3><span class="step-number">1</span> Install Arduino IDE</h3>
+                <ol>
+                  <li>Download and install <a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE
+                      2.0+</a></li>
+                  <li>Open Arduino IDE and go to <strong>File → Preferences</strong></li>
+                  <li>Add ESP32 board manager URL:
+                    <div class="code-block mt-2 mb-2">
+                      https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</div>
+                  </li>
+                  <li>Go to <strong>Tools → Board Manager</strong>, search for "ESP32" and install version 2.0.3+</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-12">
+              <div class="setup-content">
+                <h3><span class="step-number">2</span> Install Required Libraries</h3>
+                <p>Open <strong>Library Manager</strong> and install:</p>
+                <ul class="feature-list">
+                  <li><i class="fas fa-book"></i> <strong>ArduinoJson</strong> by Benoit Blanchon (v6.x or later)</li>
+                  <li><i class="fas fa-book"></i> <strong>LVGL</strong> by kisvegabor (v8.3.X)</li>
+                  <li><i class="fas fa-book"></i> <strong>PubSubClient</strong> by Nick O'Leary (v2.8 or later)</li>
+                </ul>
+
+                <h5 class="mt-4">Configure LVGL</h5>
+                <p>Copy the provided <code>lv_conf.h</code> file to your Arduino libraries folder:</p>
+                <div class="code-block">cp WebScreen-Software/lv_conf.h ~/Arduino/libraries/</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-12">
+              <div class="setup-content">
+                <h3><span class="step-number">3</span> Configure Board Settings</h3>
+                <p>In Arduino IDE, configure these settings under <strong>Tools</strong> menu:</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="feature-list">
+                      <li><i class="fas fa-cog"></i> <strong>Board:</strong> ESP32S3 Dev Module</li>
+                      <li><i class="fas fa-cog"></i> <strong>Port:</strong> /dev/ttyACM0</li>
+                      <li><i class="fas fa-cog"></i> <strong>USB CDC On Boot:</strong> Enabled</li>
+                      <li><i class="fas fa-cog"></i> <strong>CPU Frequency:</strong> 240MHz (WiFi)</li>
+                      <li><i class="fas fa-cog"></i> <strong>Core Debug Level:</strong> None</li>
+                      <li><i class="fas fa-cog"></i> <strong>USB DFU On Boot:</strong> Disabled</li>
+                      <li><i class="fas fa-cog"></i> <strong>Erase All Flash Before Sketch Upload:</strong> Disabled
+                      </li>
+                      <li><i class="fas fa-cog"></i> <strong>Events Run On:</strong> Core 1</li>
+                      <li><i class="fas fa-cog"></i> <strong>Flash Mode:</strong> QIO 80MHz</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="feature-list">
+                      <li><i class="fas fa-cog"></i> <strong>Flash Size:</strong> 16MB (128Mb)</li>
+                      <li><i class="fas fa-cog"></i> <strong>JTAG Adapter:</strong> Disabled</li>
+                      <li><i class="fas fa-cog"></i> <strong>Arduino Runs On:</strong> Core 1</li>
+                      <li><i class="fas fa-cog"></i> <strong>USB Firmware MSC On Boot:</strong> Disabled</li>
+                      <li><i class="fas fa-cog"></i> <strong>Partition Scheme:</strong> 16M Flash (3MB APP/9.9MB FATFS)
+                      </li>
+                      <li><i class="fas fa-cog"></i> <strong>PSRAM:</strong> OPI PSRAM</li>
+                      <li><i class="fas fa-cog"></i> <strong>Upload Mode:</strong> UART / Hardware CDC</li>
+                      <li><i class="fas fa-cog"></i> <strong>Upload Speed:</strong> 921600</li>
+                      <li><i class="fas fa-cog"></i> <strong>USB Mode:</strong> Hardware CDC and JTAG</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="row mb-5 setup-step-row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="setup-content">
+                <h3><span class="step-number">4</span> Upload the Firmware</h3>
+                <ol>
+                  <li>Clone the WebScreen repo: <strong>git clone git@github.com:HW-Lab-Hardware-Design-Agency/WebScreen-Software.git</strong></li>
+                  <li>Open the sketch: <strong>File → Open → webscreen/webscreen.ino</strong></li>
+                  <li>Enter upload mode:
+                    <ul class="mt-2">
+                      <li>Hold the <span class="button-indicator">BOOT</span> button</li>
+                      <li>Press <span class="button-indicator">RESET</span> once</li>
+                      <li>Release <span class="button-indicator">BOOT</span></li>
+                    </ul>
+                  </li>
+                  <li>On Linux you may need to update the port permissions, eg: <strong>sudo chmod 666 /dev/ttyACM0</strong></li>
+                  <li>Click the Upload button in Arduino IDE</li>
+                  <li>Wait for upload to complete</li>
+                  <li>Press <span class="button-indicator">RESET</span> to start WebScreen</li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="setup-image">
+                <img class="img-fluid" src="assets/images/ArduinoIDE-upload.png"
+                  alt="Arduino IDE showing firmware upload process to WebScreen device">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Configuration Section -->
+  <section class="about" id="advanced">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="section-title">
+            <h2 class="title">Advanced Configuration</h2>
+            <p>Customize your WebScreen experience with these advanced options</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="accordion" id="configAccordion">
+            <div class="panel">
+              <a class="panel-title" data-toggle="collapse" data-parent="#configAccordion" href="#config1">
+                Basic WiFi Setup
+              </a>
+              <div id="config1" class="panel-collapse collapse show">
+                <div class="panel-body">
+                  <div class="code-block">
+                    {
+                    "settings": {
+                    "wifi": {
+                    "ssid": "MyNetwork",
+                    "pass": "MyPassword"
+                    }
+                    },
+                    "script": "app.js"
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#configAccordion" href="#config2">
+                Custom Colors Configuration
+              </a>
+              <div id="config2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="code-block">
+                    {
+                    "settings": {
+                    "wifi": {
+                    "ssid": "MyNetwork",
+                    "pass": "MyPassword"
+                    }
+                    },
+                    "screen": {
+                    "background": "#1a1a2e",
+                    "foreground": "#eee"
+                    },
+                    "script": "weather.js"
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#configAccordion" href="#config3">
+                MQTT Configuration
+              </a>
+              <div id="config3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="code-block">
+                    {
+                    "settings": {
+                    "wifi": {
+                    "ssid": "MyNetwork",
+                    "pass": "MyPassword"
+                    },
+                    "mqtt": {
+                    "enabled": true
+                    }
+                    },
+                    "script": "mqtt_dashboard.js"
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="accordion" id="commandAccordion">
+            <div class="panel">
+              <a class="panel-title" data-toggle="collapse" data-parent="#commandAccordion" href="#cmd1">
+                Core Serial Commands
+              </a>
+              <div id="cmd1" class="panel-collapse collapse show">
+                <div class="panel-body">
+                <div class="code-block">
+/help - Show all commands
+/stats - Display system stats
+/info - Show device info
+/write &lt;file&gt; - JavaScript editor
+/load &lt;script.js&gt; - Switch JS app
+/reboot - Restart device
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#commandAccordion" href="#cmd2">
+                File Operations
+              </a>
+              <div id="cmd2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="code-block">
+/ls [path] - List files
+/cat &lt;file&gt; - Display file
+/rm &lt;file&gt; - Delete file
+/wget &lt;url&gt; [file] - Download file
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#commandAccordion" href="#cmd3">
+                Network Commands
+              </a>
+              <div id="cmd3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="code-block">
+/ping &lt;host&gt; - Test connectivity
+/monitor [cpu|mem|net] - Live monitoring
+/config get &lt;key&gt; - Get config value
+/config set &lt;key&gt; &lt;val&gt; - Set config
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubleshooting Section -->
+  <section class="faq" id="troubleshooting">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="section-title">
+            <h2 class="title">Troubleshooting</h2>
+            <p>Common issues and their solutions</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion" id="troubleshootingAccordion">
+            <div class="panel">
+              <a class="panel-title" data-toggle="collapse" data-parent="#troubleshootingAccordion" href="#trouble1">
+                Device not detected by Web Flasher
+              </a>
+              <div id="trouble1" class="panel-collapse collapse show">
+                <div class="panel-body">
+                  <ul>
+                    <li>Make sure you're using Chrome or Edge browser</li>
+                    <li>Try a different USB-C cable (some are power-only)</li>
+                    <li>Enter upload mode manually using BOOT and RESET buttons</li>
+                    <li>Check if drivers are installed (Windows may need CP2102 drivers)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#troubleshootingAccordion"
+                href="#trouble2">
+                WebScreen won't connect to WiFi
+              </a>
+              <div id="trouble2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Double-check your WiFi credentials in webscreen.json</li>
+                    <li>Ensure your WiFi is 2.4GHz (5GHz not supported)</li>
+                    <li>Check if your WiFi password contains special characters that need escaping</li>
+                    <li>Verify the SD card is formatted as FAT32</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#troubleshootingAccordion"
+                href="#trouble3">
+                Screen stays black or shows error
+              </a>
+              <div id="trouble3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Check if the SD card is properly inserted</li>
+                    <li>Verify webscreen.json file syntax is valid JSON</li>
+                    <li>Connect via serial monitor to see error messages</li>
+                    <li>Try re-flashing the firmware</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#troubleshootingAccordion"
+                href="#trouble4">
+                JavaScript app not loading
+              </a>
+              <div id="trouble4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li>Ensure the script file name in webscreen.json matches the actual file on SD card</li>
+                    <li>Check if the JavaScript file has syntax errors</li>
+                    <li>Verify the SD card is readable (try different card if needed)</li>
+                    <li>Use serial monitor to see detailed error messages</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Steps Section -->
+  <section class="contact" id="next-steps">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="section-title">
+            <h2 class="title">What's Next?</h2>
+            <p>Now that your WebScreen is set up, explore these resources to get the most out of it</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="about">
+            <div class="box">
+              <div class="inner-box">
+                <div class="icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h4 class="title">Write JavaScript Apps</h4>
+                <p class="text">Use our Serial IDE to create custom Javascript apps.</p>
+                <div class="mt-3">
+                  <a href="https://serial.webscreen.cc"
+                    target="_blank" class="btn-main-sm">
+                    <span>Open Serial IDE</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="about">
+            <div class="box">
+              <div class="inner-box">
+                <div class="icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h4 class="title">Join the Community</h4>
+                <p class="text">Share projects and get help from other WebScreen users</p>
+                <div class="mt-3">
+                  <a href="https://discord.gg/47Mc2ync"
+                    target="_blank" class="btn-main-sm">
+                    <span>Join Discussion</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="about">
+            <div class="box">
+              <div class="inner-box">
+                <div class="icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <h4 class="title">Explore Examples</h4>
+                <p class="text">Learn from working code and example applications</p>
+                <div class="mt-3">
+                  <a href="https://github.com/HW-Lab-Hardware-Design-Agency/WebScreen-Awesome"
+                    target="_blank" class="btn-main-sm">
+                    <span>View Examples</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="fotter-social-links">
+            <ul>
+              <li>
+                <a href="https://x.com/hwmedialabllc" target="_blank" class="x">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/hwlab" target="_blank" class="linkedin">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@HWMediaLab" target="_blank" class="youtube">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@hwlablcc" target="_blank" class="tiktok">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/hw.lab.llc" target="_blank" class="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/orgs/HW-Lab-Hardware-Design-Agency/repositories?q=webscreen" target="_blank"
+                  class="github">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copy-bg text-center">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title"
+          rel="cc:attributionURL" href="https://webscreen.cc/"><strong>WebScreen</strong></a> by <a
+          rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://hwlab.io/"><strong>HW Media
+            Lab LLC</strong></a> is licensed under <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank"
+          rel="license noopener noreferrer" style="display:inline-block;"><strong>CC BY-SA 4.0</strong><img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+  </footer>
+
+  <div class="edit-on-github" title="Edit this page on GitHub">
+    <i class="fab fa-github"></i>
+  </div>
+
+  <div class="bottomtotop">
+    <i class="fa fa-chevron-right"></i>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/shell/shell.min.js"></script>
+  <script>
+    // Function to format JSON code
+    function formatCode(code, mode) {
+      if (mode === 'javascript' && code.trim().startsWith('{')) {
+        try {
+          // Parse and format JSON with proper indentation
+          var parsed = JSON.parse(code);
+          return JSON.stringify(parsed, null, 2);
+        } catch (e) {
+          // If not valid JSON, return original
+          return code;
+        }
+      }
+      return code;
+    }
+
+    // Store initialized editors
+    var codeEditors = [];
+
+    // Function to initialize a single CodeMirror instance
+    function initializeCodeMirror(element) {
+      var $element = $(element);
+
+      // Skip if already initialized
+      if ($element.data('codemirror-initialized')) {
+        return $element.data('codemirror-instance');
+      }
+
+      var code = $element.text().trim();
+      var mode = 'javascript'; // Default mode
+
+      // Detect if it's a shell command
+      if (code.startsWith('cp ') || code.startsWith('/') || code.includes('https://')) {
+        mode = 'shell';
+      }
+
+      // Format the code
+      var formattedCode = formatCode(code, mode);
+
+      // Create wrapper div to maintain position
+      var wrapper = $('<div class="codemirror-wrapper"></div>');
+      $element.replaceWith(wrapper);
+
+      // Create textarea
+      var textarea = $('<textarea>').text(formattedCode).appendTo(wrapper);
+
+      // Initialize CodeMirror
+      var editor = CodeMirror.fromTextArea(textarea[0], {
+        mode: mode,
+        theme: 'monokai',
+        lineNumbers: true,
+        readOnly: true,
+        lineWrapping: true,
+        viewportMargin: Infinity,
+        autoCloseBrackets: true,
+        matchBrackets: true,
+        indentUnit: 2,
+        tabSize: 2
+      });
+
+      // Store the editor instance
+      codeEditors.push(editor);
+      wrapper.data('codemirror-initialized', true);
+      wrapper.data('codemirror-instance', editor);
+
+      // Set size after a delay to ensure proper rendering
+      setTimeout(function() {
+        editor.setSize(null, 'auto');
+        editor.refresh();
+      }, 10);
+
+      return editor;
+    }
+
+    // Initialize CodeMirror for all code blocks
+    $(document).ready(function() {
+      // Don't initialize code blocks in collapsed panels on page load
+      $('.code-block').each(function() {
+        var $this = $(this);
+        var $collapse = $this.closest('.panel-collapse');
+
+        // Only initialize if not in a collapsed panel, or if panel is already open
+        if ($collapse.length === 0 || $collapse.hasClass('show')) {
+          initializeCodeMirror(this);
+        }
+      });
+
+      // Handle accordion/collapse events
+      $('.panel-collapse').on('shown.bs.collapse', function() {
+        var $panel = $(this);
+
+        // Initialize code blocks in this panel
+        $panel.find('.code-block').each(function() {
+          initializeCodeMirror(this);
+        });
+
+        // Refresh all CodeMirror instances in this panel after animation
+        setTimeout(function() {
+          $panel.find('.CodeMirror').each(function() {
+            if (this.CodeMirror) {
+              this.CodeMirror.refresh();
+            }
+          });
+        }, 400); // Wait for Bootstrap animation to complete
+      });
+
+      // Handle tab changes
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
+        var target = $(this).attr('href');
+
+        // Initialize code blocks in the target tab
+        $(target).find('.code-block').each(function() {
+          initializeCodeMirror(this);
+        });
+
+        // Refresh all editors in the tab
+        setTimeout(function() {
+          $(target).find('.CodeMirror').each(function() {
+            if (this.CodeMirror) {
+              this.CodeMirror.refresh();
+            }
+          });
+        }, 200);
+      });
+
+      // Edit on GitHub button functionality
+      $('.edit-on-github').on('click', function() {
+        window.open('https://github.com/HW-Lab-Hardware-Design-Agency/WebScreen-Website/edit/master/setup.html', '_blank');
+      });
+    });
+  </script>
+</body>
+
+</html>
