@@ -1281,7 +1281,6 @@ select:focus {
   position: absolute;
   top: -100px;
   left: 100px;
-  max-width: 500px;
   width: auto;
   animation: shapeani3 5s linear infinite;
 }
@@ -2555,6 +2554,11 @@ select:focus {
   border-color: black;
 }
 
+.footer .fotter-social-links ul li a.discord {
+  background: #5865F2;
+  border-color: #5865F2;
+}
+
 .footer .fotter-social-links ul li a.linkedin {
   background: #007bb5;
   border-color: #007bb5;
@@ -2735,6 +2739,67 @@ select:focus {
 /*-----------------------------
 ** Footer Area End
 ------------------------------*/
+
+/*-----------------------------
+** Buy Now CTAs and Purchase Elements
+------------------------------*/
+.btn-buy-nav {
+  background: linear-gradient(45deg, #D31027 0%, #EA384D 100%);
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-buy-nav:hover {
+  background: linear-gradient(45deg, #EA384D 0%, #D31027 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(211, 16, 39, 0.3);
+}
+
+.buy-now-cta {
+  background: linear-gradient(45deg, #D31027 0%, #EA384D 100%);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(211, 16, 39, 0.2);
+}
+
+.buy-now-cta:hover {
+  background: linear-gradient(45deg, #EA384D 0%, #D31027 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(211, 16, 39, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.price-badge {
+  background: #D31027;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.availability-notice {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
 /*-----------------------------
 ** Index-2 Area Start
 ------------------------------*/
@@ -3825,10 +3890,6 @@ iframe#render {
   -webkit-text-fill-color: transparent;
 }
 
-.webscreen .subscribe-section img {
-  margin-top: 35px;
-}
-
 .webscreen .footer .copy-bg {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -3881,7 +3942,7 @@ iframe#render {
 }
 
 .webscreen .header-logos {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .webscreen .header-logos img {
