@@ -1127,7 +1127,7 @@ select:focus {
 }
 
 .navigation .navbar .navbar-brand img {
-  max-width: 170px;
+  max-width: 200px;
   filter: brightness(0) invert(1);
 }
 
@@ -2252,7 +2252,6 @@ select:focus {
 ** Contact Area Start
 ------------------------------*/
 .contact {
-  padding: 35px 0px;
   position: relative;
 }
 
@@ -2524,7 +2523,6 @@ select:focus {
 
 .footer .fotter-social-links {
   text-align: center;
-  margin-top: 35px;
 }
 
 .footer .fotter-social-links ul {
@@ -3883,7 +3881,7 @@ iframe#render {
 }
 
 .webscreen .header-logos {
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .webscreen .header-logos img {
