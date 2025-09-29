@@ -1140,6 +1140,14 @@ select:focus {
   font-weight: 600;
 }
 
+.navigation .navbar #mainmenu ul .nav-item .nav-link.buy-now {
+  background: white;
+  border-radius: 10px;
+  margin: 15px 5px 15px;
+  padding: 10px;
+  color: #D31027;
+}
+
 .navigation .navbar #mainmenu ul .nav-item .nav-link::before {
   position: absolute;
   content: " ";
