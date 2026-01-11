@@ -20,15 +20,6 @@ $(function ($) {
         $('.navbar-collapse').collapse('hide');
     });
 
-    // Product deal countdown
-    $('[data-countdown]').each(function () {
-        var $this = $(this),
-            finalDate = $(this).data('countdown');
-        $this.countdown(finalDate, function (event) {
-            $this.html(event.strftime('<span>%D <small>Days</small></span> <span>%H <small>Hrs</small></span>  <span>%M <small>Min</small></span> <span>%S <small>Sec</small></span>'));
-        });
-    });
-
     // bottom to top js start
     var html_body = $('html, body');
     var amountScrolled = 300;

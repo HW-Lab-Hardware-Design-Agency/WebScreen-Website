@@ -47,17 +47,26 @@
   <meta property="article:tag" content="Firmware">
   <meta property="article:tag" content="Tutorial">
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+
+  <!-- Critical CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/flaticon.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/setup.css">
+
+  <!-- Non-critical CSS - loaded asynchronously -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/flaticon.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'" />
   <!-- CodeMirror CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
@@ -210,23 +219,22 @@
                   <a class="nav-link" href="index.html#feature">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#marketplace">Marketplace</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="index.html#faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://www.crowdsupply.com/hw-media-lab/webscreen">Crowd
-                    Supply</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="setup.html">Setup</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://admin.webscreen.cc">Admin</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" target="_blank" href="https://serial.webscreen.cc">Serial IDE</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://flash.webscreen.cc">Flash ⚡</a>
+                  <a class="nav-link" target="_blank" href="https://flash.webscreen.cc">Flash</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link buy-now" target="_blank" href="https://www.crowdsupply.com/hw-media-lab/webscreen">🛒 Buy Now</a>
                 </li>
               </ul>
             </div>
@@ -911,15 +919,17 @@
     <i class="fa fa-chevron-right"></i>
   </div>
 
+  <!-- Critical JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="assets/js/jquery.countdown.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  <!-- Deferred JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" defer></script>
+  <script src="assets/js/owl.carousel.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 
   <!-- CodeMirror JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>

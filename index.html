@@ -36,16 +36,26 @@
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/images/favicon.ico">
+
+  <!-- Preconnect to external domains for faster loading -->
+  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+
+  <!-- Critical CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/flaticon.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Non-critical CSS - loaded asynchronously -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/flaticon.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -61,11 +71,13 @@
     "category": "Electronics",
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/PreOrder",
-      "priceValidUntil": "2025-12-31",
+      "availability": "https://schema.org/InStock",
+      "price": "99.00",
+      "priceCurrency": "USD",
+      "url": "https://www.crowdsupply.com/hw-media-lab/webscreen",
       "seller": {
         "@type": "Organization",
-        "name": "WebScreen"
+        "name": "Crowd Supply"
       }
     },
     "aggregateRating": {
@@ -157,13 +169,13 @@
                   <a class="nav-link" href="#feature">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#marketplace">Marketplace</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="#faq">FAQ</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="setup.html">Setup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://admin.webscreen.cc">Admin</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" target="_blank" href="https://serial.webscreen.cc">Serial IDE</a>
@@ -172,7 +184,7 @@
                   <a class="nav-link" target="_blank" href="https://flash.webscreen.cc">Flash</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link buy-now" target="_blank" href="https://www.crowdsupply.com/hw-media-lab/webscreen">🛒 Pre-order</a>
+                  <a class="nav-link buy-now" target="_blank" href="https://www.crowdsupply.com/hw-media-lab/webscreen">🛒 Buy Now</a>
                 </li>
               </ul>
             </div>
@@ -190,11 +202,11 @@
           <div class="left-content">
             <div class="content">
               <h1 class="title">
-                Pre-Order Now on Crowd Supply! 🚀
+                The Ultimate Secondary Display for Your Desk
               </h1>
 
               <p class="subtitle">
-                <strong>WebScreen is LIVE on Crowd Supply!</strong> Pre-order your hackable, open-source gadget today. Perfect for gamers, makers, and creators who want to stay in the zone without distractions.
+                <strong>WebScreen is available now on Crowd Supply!</strong> A hackable, open-source AMOLED display for gamers, makers, and creators. See notifications, run custom apps, and stay focused without distractions.
               </p>
               <div class="links">
                 <div class="newsletter-form-area">
@@ -224,9 +236,9 @@
       <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="section-title extra">
-            <h2 class="title">Why WebScreen Rocks Your World</h2>
+            <h2 class="title">Why Makers Love WebScreen</h2>
             <p>
-              <strong>WebScreen is now available for pre-order!</strong> Join hundreds of makers who are ready to build amazing things. Get your complete WebScreen kit with everything you need to start creating. Pre-order today for February 2026 delivery!
+              Join thousands of makers, gamers, and creators who use WebScreen to enhance their workflow. Each kit includes the WebScreen device, 8GB microSD with apps, USB-C cable, and quickstart guide.
             </p>
           </div>
         </div>
@@ -234,10 +246,10 @@
       <div class="row justify-content-center mb-4">
         <div class="col-lg-8 text-center">
           <a href="https://www.crowdsupply.com/hw-media-lab/webscreen" target="_blank" class="buy-now-cta">
-            🛒 Pre-Order Your WebScreen - $99
+            🛒 Buy WebScreen - $99
           </a>
           <p style="margin-top: 10px;">
-            <strong>📅 Pre-order now</strong> • Ships February 28, 2026
+            <strong>Free US Shipping</strong> • $12 Worldwide
           </p>
         </div>
       </div>
@@ -325,7 +337,7 @@
   </section>
 
   <section class="3d-render">
-    <iframe id="render" width="100%" height="980" src="https://www.youtube.com/embed/3Kc76S7xg9g?si=j6QE_-94fieKdB5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe id="render" width="100%" height="980" src="https://www.youtube.com/embed/3Kc76S7xg9g?si=j6QE_-94fieKdB5o" title="WebScreen product video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
   </section>
 
   <section class="feature" id="feature">
@@ -333,9 +345,9 @@
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-9">
           <div class="section-title">
-            <h2 class="title">Pre-Order Your WebScreen Kit!</h2>
+            <h2 class="title">What's in the Box</h2>
             <p>
-              <strong>🎯 Shipping February 2026!</strong> Each kit includes WebScreen device, 8GB microSD with apps, USB-C cable, quickstart guide, and exclusive online content. Secure yours on Crowd Supply!
+              Each WebScreen kit includes the display device, 8GB microSD pre-loaded with apps, USB-C cable, quickstart guide, and access to exclusive online content. Order yours on Crowd Supply.
             </p>
           </div>
         </div>
@@ -548,14 +560,14 @@
           <div class="section-title">
             <h2 class="title">Get Started with WebScreen Apps</h2>
             <div class="availability-notice mb-4">
-              <strong>🎯 Pre-order now and get access to exclusive limited-edition apps!</strong> Plus, join our community of developers creating amazing apps.
+              <strong>Build your own apps or explore our growing library of community-created applications.</strong>
             </div>
             <p>
               Create custom apps using the <a href="https://github.com/cesanta/elk" target="_blank"><strong>Elk JavaScript Engine</strong></a>. WebScreen empowers you to build JavaScript applications stored on a micro SD card. Start by visiting <a href="https://hwlab.io/blog/unlocking-webscreens-potential-elk-javascript-engine" target="_blank"><strong>this guide</strong></a> and fork the <a href="https://github.com/HW-Lab-Hardware-Design-Agency/WebScreen-App-Template/fork" target="_blank"><strong>App template</strong></a>.
             </p>
             <div class="text-center mt-4 mb-4">
               <a href="https://www.crowdsupply.com/hw-media-lab/webscreen" target="_blank" class="buy-now-cta">
-                Pre-Order WebScreen + Start Exploring Our Apps - $99
+                Buy WebScreen + Start Building - $99
               </a>
             </div>
           </div>
@@ -1049,13 +1061,13 @@
               <div class="panel-heading">
                 <h4 data-toggle="collapse" data-target="#eight" aria-expanded="false" aria-controls="eight"
                   class="panel-title">
-                  What's the deal with the Crowd Supply campaign?
+                  Where can I buy WebScreen?
                 </h4>
               </div>
               <div id="eight" class="panel-collapse collapse" aria-labelledby="eight" data-parent="#accordion-1">
                 <div class="panel-body">
                   <p>
-                    We're heading to Crowdsupply.com to bring WebScreen to life! Your support helps us move from prototypes to the real deal.
+                    WebScreen is available exclusively through Crowd Supply. They handle worldwide shipping with free delivery to the US and affordable rates internationally.
                   </p>
                 </div>
               </div>
@@ -1087,7 +1099,7 @@
               <div id="ten" class="panel-collapse collapse" aria-labelledby="ten" data-parent="#accordion-1">
                 <div class="panel-body">
                   <p>
-                    Sign up for our newsletter! We'll keep you in the loop with updates, launch info, and behind-the-scenes peeks.
+                    Check out our GitHub for documentation, join our Discord community, or visit the Crowd Supply page for detailed specs and updates.
                   </p>
                 </div>
               </div>
@@ -1137,12 +1149,12 @@
                     <div class="col-lg-6 d-flex">
                       <div class="right-area">
                         <h4 class="name">
-                          We're are live on Crowd Supply!
+                          Available Now on Crowd Supply
                         </h4>
                         <p class="description">
-                          We're super excited to bring WebScreen to Crowdsupply! Your support helps us make this dream a reality.
+                          WebScreen is shipping worldwide through Crowd Supply. Get yours today and join the community of makers building amazing things.
                         </p>
-                        <p>Buy WebScreen on <a href="https://www.crowdsupply.com/hw-media-lab/webscreen" target="_blank">Crowd Supply<a></p>
+                        <p>Order now on <a href="https://www.crowdsupply.com/hw-media-lab/webscreen" target="_blank">Crowd Supply</a></p>
                       </div>
                     </div>
                   </div>
@@ -1159,12 +1171,12 @@
                     <div class="col-lg-6 d-flex">
                       <div class="right-area">
                         <h4 class="name">
-                          Your Support Means Everything
+                          100% Open Source Hardware
                         </h4>
                         <p class="description">
-                          We're breaking new ground with WebScreen, and we can't do it without you. Back us on Crowdsupply, and let's revolutionize how we connect with our digital worlds.
+                          WebScreen is OSHWA certified open-source hardware. Hack it, mod it, build on it. Full schematics, firmware, and documentation available on GitHub.
                         </p>
-                        <p>❤️ Join us and be part of something amazing.</p>
+                        <p>❤️ Built by makers, for makers.</p>
                       </div>
                     </div>
                   </div>
@@ -1184,8 +1196,8 @@
         <div class="col-md-10 col-lg-8">
           <div class="section-title">
             <div class="section-title extra">
-              <p><strong>Ready to Pre-Order Your WebScreen?</strong></p>
-              <p>$99 USD with Free US Shipping / $12 Worldwide</p>
+              <p><strong>Ready to Get Your WebScreen?</strong></p>
+              <p>$99 USD • Free US Shipping • $12 Worldwide</p>
             </div>
             <div class="newsletter-form-area">
               <a href="https://www.crowdsupply.com/hw-media-lab/webscreen"  target="_blank"><img class="img" src="assets/images/buy_now.gif" alt="Buy now on CrowdSupply"></a>
@@ -1262,15 +1274,17 @@
     <i class="fa fa-chevron-right"></i>
   </div>
 
+  <!-- Critical JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="assets/js/jquery.countdown.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  <!-- Deferred JS for non-critical functionality -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" defer></script>
+  <script src="assets/js/owl.carousel.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
