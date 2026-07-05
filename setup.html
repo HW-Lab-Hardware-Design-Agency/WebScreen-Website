@@ -54,7 +54,7 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
 
   <!-- Critical CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/setup.css">
@@ -645,8 +645,10 @@
 /help - Show all commands
 /stats - Display system stats
 /info - Show device info
-/write &lt;file&gt; - JavaScript editor
-/load &lt;script.js&gt; - Switch JS app
+/brightness &lt;0-255&gt; - Set display brightness
+/time - Show current device time
+/settime &lt;epoch&gt; [tz] - Set device time
+/factory_reset confirm - Delete config, reboot to fallback
 /reboot - Restart device
                   </div>
                 </div>
@@ -655,15 +657,19 @@
 
             <div class="panel">
               <a class="panel-title collapsed" data-toggle="collapse" data-parent="#commandAccordion" href="#cmd2">
-                File Operations
+                JavaScript App Commands
               </a>
               <div id="cmd2" class="panel-collapse collapse">
                 <div class="panel-body">
                   <div class="code-block">
-/ls [path] - List files
-/cat &lt;file&gt; - Display file
-/rm &lt;file&gt; - Delete file
-/wget &lt;url&gt; [file] - Download file
+/write &lt;file&gt; - Interactive JavaScript editor
+/upload &lt;file&gt; [base64] - Upload text or binary file
+/load &lt;script.js&gt; [save] - Switch JS app (save = persist)
+/restart_app - Restart JS app in place (no reboot)
+/eval &lt;js&gt; - Live REPL into the running app
+/errors - Last JS error + safe-mode state
+/gc - Run JS garbage collection
+/screenshot - Capture screen as base64 RGB565
                   </div>
                 </div>
               </div>
@@ -671,19 +677,62 @@
 
             <div class="panel">
               <a class="panel-title collapsed" data-toggle="collapse" data-parent="#commandAccordion" href="#cmd3">
-                Network Commands
+                File Operations
               </a>
               <div id="cmd3" class="panel-collapse collapse">
                 <div class="panel-body">
                   <div class="code-block">
+/ls [path] [json] - List files (json = machine-readable)
+/cat &lt;file&gt; - Display file
+/rm &lt;file|empty-dir&gt; - Delete file or empty directory
+/mkdir &lt;path&gt; - Create directory
+/download &lt;file&gt; - Dump file as base64 to host
+/wget &lt;url&gt; [file] - Download from URL to SD card
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <a class="panel-title collapsed" data-toggle="collapse" data-parent="#commandAccordion" href="#cmd4">
+                Network &amp; Configuration
+              </a>
+              <div id="cmd4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="code-block">
 /ping &lt;host&gt; - Test connectivity
 /monitor [cpu|mem|net] - Live monitoring
+/backup [save|restore|list] - Backup/restore config
 /config get &lt;key&gt; - Get config value
 /config set &lt;key&gt; &lt;val&gt; - Set config
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript API Highlights -->
+      <div class="row justify-content-center mt-5" id="js-api">
+        <div class="col-lg-10">
+          <div class="setup-content">
+            <h3>JavaScript API Highlights</h3>
+            <p>WebScreen apps are plain JavaScript files running on the device. Some highlights of what the API offers:</p>
+            <ul class="feature-list">
+              <li><i class="fas fa-chart-line"></i> <strong>Chart widgets</strong> — plot live data series with the <code>lv_chart_*</code> functions (line, bar, and scatter charts)</li>
+              <li><i class="fas fa-font"></i> <strong>String &amp; number helpers</strong> — <code>str_split</code>, <code>str_split_count</code>, <code>format_number</code>, <code>pad_number</code>, and hardware-backed <code>random()</code></li>
+              <li><i class="fas fa-clock"></i> <strong>Time formatting</strong> — <code>format_time("%H:%M:%S")</code> renders NTP-synced local time with strftime patterns</li>
+              <li><i class="fas fa-hand-pointer"></i> <strong>Button events</strong> — handle short presses of the hardware button in JS with <code>on_button()</code>, <code>get_button_event()</code>, and <code>button_set_toggle()</code></li>
+              <li><i class="fas fa-bug"></i> <strong>Better debugging</strong> — JS errors include line numbers (<code>(line N)</code>), and the <code>/errors</code> serial command retrieves the last one</li>
+            </ul>
+            <p class="mt-3">
+              See the full
+              <a href="https://github.com/HW-Lab-Hardware-Design-Agency/WebScreen-Software/blob/main/docs/API.md" target="_blank"><strong>JavaScript API reference</strong></a>
+              and
+              <a href="https://github.com/HW-Lab-Hardware-Design-Agency/WebScreen-Software/blob/main/docs/SerialCommands.md" target="_blank"><strong>serial commands guide</strong></a>
+              in the WebScreen-Software repository.
+            </p>
           </div>
         </div>
       </div>
