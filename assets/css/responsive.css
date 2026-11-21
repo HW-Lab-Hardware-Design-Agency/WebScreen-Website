@@ -85,6 +85,7 @@
     .feature .feature-box .details .title,
     .dealofweek .deal-slider-area .content .right-area .name,
     .about .box .inner-box .title,
+    .whaybest .feature-list li .content h3,
     .whaybest .feature-list li .content h4 {
         font-size: 20px;
         line-height: 30px;
@@ -457,7 +458,8 @@
         line-height: 50px;
     }
 
-    iframe#render {
+    iframe#render,
+    .video-facade {
         max-height: 300px !important;
         border-radius: inherit;
     }
