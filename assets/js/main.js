@@ -178,3 +178,21 @@ $(function ($) {
     });
 
 });
+
+// Product video: swap the poster for the player only when the visitor asks for it,
+// so the home page does not load the YouTube player (and its cookies) up front.
+document.addEventListener('click', function (event) {
+    var facade = event.target.closest ? event.target.closest('.video-facade') : null;
+    if (!facade) return;
+    var player = document.createElement('iframe');
+    player.id = 'render';
+    player.width = '100%';
+    player.height = '980';
+    player.title = 'WebScreen product video';
+    player.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(facade.dataset.videoId) + '?autoplay=1&rel=0';
+    player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    player.referrerPolicy = 'strict-origin-when-cross-origin';
+    player.allowFullscreen = true;
+    facade.replaceWith(player);
+    player.focus();
+});

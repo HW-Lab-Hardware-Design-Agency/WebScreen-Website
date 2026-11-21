@@ -99,3 +99,11 @@ broad text search or reading many files:
 After ken narrows the search space, read the relevant files directly. Fall back
 to `rg` when ken is insufficient, when an exact literal search is required, or
 when verifying a specific string occurrence.
+
+## Performance and accessibility conventions
+
+- Page images are WebP (`assets/images/*.webp`), referenced with intrinsic `width`/`height` attributes; `img { height: auto }` in `style.css` keeps their ratio. The original PNG/JPG files stay in the repo because social previews (`og:image`) use them.
+- Images below the first screen use `loading="lazy" decoding="async"`. The absolutely positioned `.shape` images are not lazy-loaded.
+- Google Fonts are linked from each page with `display=swap` (not `@import` inside `style.css`).
+- The product video on the home page is a poster button (`.video-facade`); `main.js` swaps in the `youtube-nocookie.com` player on click, so no YouTube code or cookies load up front.
+- Section sub-headings on the home page are `h3` (styled at the former `h4` size) so the heading outline has no gaps; page content sits inside `<main>`.
